@@ -44,7 +44,7 @@ namespace WPF_BE_test
             ClearSet(context.Sorted);
 
 
-            GetRandomNmbs(10).ForEach(n =>
+            GetRandomNmbs(20).ForEach(n =>
             {
                 context.NotSorted.Add(new NotSortedItem { Number = n });
                 //Save after each change to preserve add order
@@ -85,7 +85,7 @@ namespace WPF_BE_test
                 nmb = r.Next(1, count + 1);
                 if (!rslt.Contains(nmb))
                     rslt.Add(nmb);
-            } while (rslt.Count < 10);
+            } while (rslt.Count < count);
             return rslt;
         }
 
